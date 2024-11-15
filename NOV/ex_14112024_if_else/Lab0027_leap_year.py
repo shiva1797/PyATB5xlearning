@@ -1,4 +1,4 @@
-# if Leapyear%400==0 or Leapyear%4==0 and Leapyear%100!=0:
+#leap year
 
 year = int(input("enter year"))
 
