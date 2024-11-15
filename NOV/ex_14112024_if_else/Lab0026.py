@@ -13,7 +13,7 @@ if side_a == side_b ==side_c:
     print("equilateral")
 elif(side_a == side_b != side_c) or (side_a!= side_b == side_c) or (side_a==side_c != side_b):
     print("isosceles")
-elif(side_a != side_b != side_c):
+else:
     print("scalene")
 
 
