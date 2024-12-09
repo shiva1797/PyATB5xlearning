@@ -3,6 +3,8 @@ for i in my_list:
     print(i)
 my_list.append(5)
 
+my_list[1]= "shiva kumar"
+print(my_list)
 print(my_list)
 
 my_list.extend([1,23,4,5,6])
