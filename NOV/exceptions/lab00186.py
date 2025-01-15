@@ -1,31 +1,29 @@
-# Abstraction
-# Hide the details and show what is required.
+class ExcelReader:
+
+    @staticmethod
+    def read_from_excel():
+        print("Reading from excel")
+        print(TC1.static_var)
+
+class MYSQLDBConnection:
+
+    @staticmethod
+    def readMySQLFile():
+        print("Reading from MySQL")
 
 
-# Car - with key _ __private, tyres -> public,
+class TC1:
 
-# Car -> multiple - Engine, GearBox
-# Car -> driver -> Engine, gearbox?
-
-
-from abc import ABC,abstractmethod
-
-class Animal(ABC):
-    def __init__(self, name):
-        self.name = name
-
-    @abstractmethod
-    def make_sound(self):
-        print("im private")
-        pass
+    static_var = 10
 
 
-class Dog(Animal):
-    def make_sound(self):
-        print("Bark Bark....")
+    @staticmethod
+    def testcase():
+        MYSQLDBConnection.readMySQLFile()
+        ExcelReader.read_from_excel()
+        print(TC1.static_var) # Shared among all instances of the class
 
 
-obj_animal = Animal
-obj_animal.make_sound("sound")
-obj_dog = Dog("Shera")
-obj_dog.make_sound()
+
+
+MYSQLDBConnection.readMySQLFile()
